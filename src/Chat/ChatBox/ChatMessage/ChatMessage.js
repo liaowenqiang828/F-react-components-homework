@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ROLE } from '../../../constants';
+import ROLE from '../../../constants';
 import './ChatMessage.scss';
 
 class ChatMessage extends Component {

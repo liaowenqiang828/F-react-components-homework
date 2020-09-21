@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ChatBox.scss';
 import ChatMessage from './ChatMessage/ChatMessage';
-import { ROLE } from '../../constants';
+import ROLE from '../../constants';
 
 class ChatBox extends Component {
   render() {
@@ -9,8 +9,8 @@ class ChatBox extends Component {
     return (
       <section className="ChatBox">
         <ul>
-          {messages.map((message, index) => (
-            <li key={index} className={message.role === ROLE.ROBOT ? 'robot' : 'customer'}>
+          {messages.map((message) => (
+            <li key={message.text} className={message.role === ROLE.ROBOT ? 'robot' : 'customer'}>
               <ChatMessage text={message.text} role={message.role} />
             </li>
           ))}
